@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ludo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <h1>Ludo</h1>
+      <p class="subtitle">4 players · roll a 6 to leave home · land on an opponent to send them back</p>
+    </header>
+
+    <main class="game">
+      <div class="board-wrap">
+        <div id="board" class="board"></div>
+      </div>
+
+      <aside class="sidebar">
+        <div class="turn-card">
+          <div class="turn-label">Current turn</div>
+          <div id="currentPlayer" class="turn-name">Red</div>
+          <div id="diceArea" class="dice-area">
+            <div id="dice" class="dice">-</div>
+            <button id="rollBtn" class="btn primary">Roll Dice</button>
+          </div>
+          <div id="message" class="message"></div>
+        </div>
+
+        <div class="players">
+          <div class="player" data-player="0"><span class="swatch red"></span><span>Red</span><span class="home-count" id="home-0">4 home</span></div>
+          <div class="player" data-player="1"><span class="swatch green"></span><span>Green</span><span class="home-count" id="home-1">4 home</span></div>
+          <div class="player" data-player="2"><span class="swatch yellow"></span><span>Yellow</span><span class="home-count" id="home-2">4 home</span></div>
+          <div class="player" data-player="3"><span class="swatch blue"></span><span>Blue</span><span class="home-count" id="home-3">4 home</span></div>
+        </div>
+
+        <div class="scoreboard">
+          <div class="score-title">Finished tokens</div>
+          <div class="score-row"><span class="swatch red"></span><span id="score-0">0 / 4</span></div>
+          <div class="score-row"><span class="swatch green"></span><span id="score-1">0 / 4</span></div>
+          <div class="score-row"><span class="swatch yellow"></span><span id="score-2">0 / 4</span></div>
+          <div class="score-row"><span class="swatch blue"></span><span id="score-3">0 / 4</span></div>
+        </div>
+
+        <button id="resetBtn" class="btn ghost">Reset Game</button>
+      </aside>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
